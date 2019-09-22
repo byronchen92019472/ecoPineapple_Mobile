@@ -23,11 +23,11 @@
         </Style>
     </ContentPage.Resources>
     
-    <Shell.SearchHandler>
+    <!--<Shell.SearchHandler>
         <controls:MonkeySearchHandler Placeholder="Enter search term"
                                       ShowsResults="true"
                                       DisplayMemberName="Name" />
-    </Shell.SearchHandler>
+    </Shell.SearchHandler>-->
     
     <CollectionView Margin="20"
                     ItemsSource="{x:Static data:MonkeyData.Monkeys}"

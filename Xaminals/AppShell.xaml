@@ -27,7 +27,7 @@
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor" 
-                    Value="#039BE6" />
+                    Value="#434343" /> <!-- #67971A" Green colour-->        
         </Style>
         <Style x:Key="MonkeysShell" 
                TargetType="Element"
@@ -52,7 +52,37 @@
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor" 
                     Value="#96d1ff" />
+        </Style>      
+        <Style x:Key="AnnouncementShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="#96d1ff" />
         </Style>       
+        <Style x:Key="AccessibilityShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="#96d1ff" />
+        </Style>   
+        <Style x:Key="PrivacyShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="#96d1ff" />
+        </Style>       
+        <Style x:Key="ContactShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="#96d1ff" />
+        </Style>
+        <Style x:Key="SustainabilityShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="#96d1ff" />
+        </Style>
     </Shell.Resources>
  
     <Shell.FlyoutHeader>
@@ -118,38 +148,108 @@
     <FlyoutItem Route="animals"
                 Title="Animals"
                 FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Domestic"
+        <Tab Title="Home"
              Route="domestic"
-             Icon="paw.png">
+             Icon="home.png">
+
             <ShellContent Route="cats"
                           Style="{StaticResource DomesticShell}"
                           Title="Cats"
                           Icon="cat.png"
-                          ContentTemplate="{DataTemplate views:CatsPage}" />
+                          ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+
+        <Tab Title="Issues"
+             Route="domestic"
+             Icon="issues.svg">
+          
+            <ShellContent Route="monkeys"
+                          Style="{StaticResource MonkeysShell}"
+                          Title="Home"
+                          Icon="issues.png"
+                          ContentTemplate="{DataTemplate views:SustainabilityHome}" />
             <ShellContent Route="dogs"
                           Style="{StaticResource DomesticShell}"
-                          Title="Dogs"
+                          Title="Climate"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource DomesticShell}"
+                          Title="Food"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource DomesticShell}"
+                          Title="Energy"
                           Icon="dog.png"
                           ContentTemplate="{DataTemplate views:DogsPage}" />
         </Tab>
-        <ShellContent Route="monkeys"
-                      Style="{StaticResource MonkeysShell}"
-                      Title="Monkeys"
-                      Icon="monkey.png"
-                      ContentTemplate="{DataTemplate views:MonkeysPage}" />
-        <ShellContent Route="elephants"
-                      Style="{StaticResource ElephantsShell}"
-                      Title="Elephants"
-                      Icon="elephant.png"
-                      ContentTemplate="{DataTemplate views:ElephantsPage}" />  
-        <ShellContent Route="bears"
-                      Style="{StaticResource BearsShell}"
-                      Title="Bears"
-                      Icon="bear.png"
-                      ContentTemplate="{DataTemplate views:BearsPage}" />
+        <Tab Title="Solutions"
+             Route="domestic"
+             Icon="products.svg">
+            <ShellContent Route="elephants"
+                          Style="{StaticResource ElephantsShell}"
+                          Title="Home"
+                          Icon="solutions.png"
+                          ContentTemplate="{DataTemplate views:AboutPage}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource DomesticShell}"
+                          Title="Material"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:ElephantsPage}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource DomesticShell}"
+                          Title="Sourcing"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+        </Tab>
+        <Tab Title="Products"
+             Route="domestic"
+             Icon="solutions.svg">
+            <ShellContent Route="bears"
+                          Style="{StaticResource BearsShell}"
+                          Title="Home"
+                          Icon="products.png"
+                          ContentTemplate="{DataTemplate views:BearsPage}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource DomesticShell}"
+                          Title="Spoon"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource DomesticShell}"
+                          Title="Space"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+        </Tab>
     </FlyoutItem>
     
-    <ShellContent Route="about"
+    <ShellContent Route="announcement"
+                  Style="{StaticResource AnnouncementShell}"
+                  Title="Announcement"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:AnnouncementPage}" />
+    <ShellContent Route="accessibility"
+                  Style="{StaticResource AccessibilityShell}"
+                  Title="Accessibility"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:AccessibilityPage}" />
+    <ShellContent Route="privacy"
+                  Style="{StaticResource PrivacyShell}"
+                  Title="Privacy Policy"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:PrivacyPage}" />
+    <ShellContent Route="contact"
+                  Style="{StaticResource ContactShell}"
+                  Title="Contact Information"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:ContactPage}" />
+    <ShellContent Route="sustainability"
+                  Style="{StaticResource SustainabilityShell}"
+                  Title="Sustainability Issues"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:SustainabilityHome}" />        
+    <!--<ShellContent Route="about"
                   Style="{StaticResource AboutShell}"
                   Title="About"
                   Icon="info.png"
@@ -161,6 +261,6 @@
     <MenuItem Text="Help"
               Icon="help.png"
               Command="{Binding HelpCommand}"
-              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />-->
     
 </Shell>

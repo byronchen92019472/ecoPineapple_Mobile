@@ -42,6 +42,36 @@
                        FontAttributes="Bold" />
             </Grid>
         </DataTemplate>
-        
+
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#fbbf14"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="Padding" Value="0,0,0,0"/>
+            <Setter Property="BorderColor" Value="#000000"/>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+
+        <Style x:Key="headingStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="Margin" Value="15,15,15,15"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
+        </Style>
+
+        <Style x:Key="textbodyStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="DarkGray"/>
+            <Setter Property="Margin" Value="15,0,15,15"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="FontFamily" Value="Droid Sans Mono"/>
+        </Style>
+
+        <Style x:Key="largeimageStyle" TargetType="Image">
+            <Setter Property="Margin" Value="15,0,15,15"/>
+        </Style>
+
     </Application.Resources>
 </Application>
