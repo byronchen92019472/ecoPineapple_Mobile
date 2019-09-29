@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Xaminals.Views.SustainabilityClimate"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             Title="Sustainability">
+    <ContentPage.Resources>
+            <Color x:Key="Primary">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Climate Change" Style="{StaticResource headingStyle}"/>
+            <Label x:Name="SustainabilityClimateText1" Text="" Style="{StaticResource textbodyStyle}"/>
+            <Image Source="climatechange.png" Style="{StaticResource largeimageStyle}"/>
+            <Label x:Name="SustainabilityClimateText2" Text="" Style="{StaticResource textbodyStyle}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

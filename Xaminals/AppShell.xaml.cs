@@ -32,6 +32,7 @@ namespace Xaminals
             routes.Add("catdetails", typeof(CatDetailPage));
             routes.Add("dogdetails", typeof(DogDetailPage));
             routes.Add("elephantdetails", typeof(ElephantDetailPage));
+            routes.Add("announcementdetails", typeof(AnnouncementDetailPage));
 
             foreach (var item in routes)
             {

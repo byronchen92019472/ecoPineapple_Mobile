@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Xaminals.Views.SustainabilityPlastic"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             Title="Sustainability">
+    <ContentPage.Resources>
+            <Color x:Key="Primary">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Plastics" Style="{StaticResource headingStyle}"/>
+            <Image Source="plastic.png" Style="{StaticResource largeimageStyle}"/>
+            <Label x:Name="SustainabilityPlasticText1" Text="" Style="{StaticResource textbodyStyle}"/>
+            <Label x:Name="SustainabilityPlasticText2" Text="" Style="{StaticResource textbodyStyle}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

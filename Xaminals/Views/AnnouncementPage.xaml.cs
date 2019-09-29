@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Input;
 using Xamarin.Forms;
+using System.Linq;
+using Xaminals.Models;
 
 namespace Xaminals.Views
 {
@@ -12,6 +14,15 @@ namespace Xaminals.Views
         {
             InitializeComponent();
             BindingContext = this;
+        }
+
+        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string announcetitle = (e.CurrentSelection.FirstOrDefault() as Announcement).Title;
+            // This works because route names are unique in this application.
+            await Shell.Current.GoToAsync($"announcementdetails?name={announcetitle}");
+            // The full route is shown below.
+            // await Shell.Current.GoToAsync($"//animals/bears/beardetails?name={bearName}");
         }
     }
 }

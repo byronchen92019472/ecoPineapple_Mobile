@@ -1,78 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xaminals.Controls"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             xmlns:views="clr-namespace:Xaminals.Views"
              x:Class="Xaminals.Views.AnnouncementPage"
              Title="Announcements">
     <ContentPage.Resources>
-            <Color x:Key="Primary">#96d1ff</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#546DFE" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
     </ContentPage.Resources>
-    
-    <ScrollView>
-         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <StackLayout BackgroundColor="{StaticResource Primary}" 
-                         VerticalOptions="FillAndExpand" 
-                         HorizontalOptions="Fill">
-                <StackLayout Orientation="Horizontal" 
-                             HorizontalOptions="Center" 
-                             VerticalOptions="Center">
-                    <ContentView Padding="0,40,0,40" 
-                                 VerticalOptions="FillAndExpand">
-                        <Image Source="xamarin_logo.png" 
-                               VerticalOptions="Center" 
-                               HeightRequest="64" />
-                    </ContentView>
-                </StackLayout>
-            </StackLayout>
-            <ScrollView Grid.Row="1">
-                <StackLayout Orientation="Vertical" 
-                             Padding="16,40,16,40"
-                             Spacing="10">
-                    <Label FontSize="22">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="Xamarin Animals" 
-                                          FontAttributes="Bold" 
-                                          FontSize="22" />
-                                    <Span Text=" " />
-                                    <Span Text="1.0" 
-                                          ForegroundColor="{StaticResource LightTextColor}" />
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="This app is written in XAML and C# with the " />
-                                    <Span Text="Xamarin Platform" 
-                                          FontAttributes="Bold" 
-                                          TextColor="Blue" 
-                                          TextDecorations="Underline">
-                                        <Span.GestureRecognizers>
-                                           <TapGestureRecognizer Command="{Binding TapCommand, Mode=OneWay}"
-                                                                 CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/" />
-                                         </Span.GestureRecognizers>
-                                    </Span>
-                                    <Span Text="." />
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button Margin="0,10,0,0"
-                            Text="Learn more" 
-                            Command="{Binding TapCommand}"
-                            CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/"
-                            BackgroundColor="{StaticResource Primary}"
-                            TextColor="White" />
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-    </ScrollView>
+
+    <!--<Shell.SearchHandler>
+        <controls:AnimalSearchHandler Placeholder="Enter search term"
+                                      ShowsResults="true"
+                                      ItemTemplate="{StaticResource AnimalSearchTemplate}"
+                                      Animals="{x:Static data:BearData.Bears}"
+                                      SelectedItemNavigationTarget="{x:Type views:BearDetailPage}" />
+    </Shell.SearchHandler>-->
+
+    <!--    <Shell.SearchHandler>
+        <SearchHandler x:Name="searchHandler"
+                       Placeholder="Enter search term"
+                       ShowsResults="true"
+                       Command="{Binding SearchCommand}"
+                       CommandParameter="{Binding Source={x:Reference searchHandler}, Path=Query}"
+                       ItemsSource="{Binding SearchResults}"
+                       ItemTemplate="{StaticResource AnimalSearchTemplate}" />
+    </Shell.SearchHandler>-->
+
+    <CollectionView Margin="20"
+                    ItemsSource="{x:Static data:AnnouncementData.Announce}"
+                    ItemTemplate="{StaticResource AnnouncementTemplate}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged" />
 </ContentPage>

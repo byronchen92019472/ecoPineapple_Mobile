@@ -17,6 +17,12 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AnnouncementDetailPage.xaml.cs">
+      <DependentUpon>AnnouncementDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\AccessibilityPage.xaml.cs">
       <DependentUpon>AccessibilityPage.xaml</DependentUpon>
     </Compile>
@@ -31,6 +37,27 @@
     </Compile>
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ProductHome.xaml.cs">
+      <DependentUpon>ProductHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SolutionRecycle.xaml.cs">
+      <DependentUpon>SolutionRecycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SolutionSpace.xaml.cs">
+      <DependentUpon>SolutionSpace.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SolutionRole.xaml.cs">
+      <DependentUpon>SolutionRole.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SustainabilityPlastics.xaml.cs">
+      <DependentUpon>SustainabilityPlastics.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SustainabilityClimate.xaml.cs">
+      <DependentUpon>SustainabilityClimate.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SolutionHome.xaml.cs">
+      <DependentUpon>SolutionHome.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\SustainabilityHome.xaml.cs">
       <DependentUpon>SustainabilityHome.xaml</DependentUpon>

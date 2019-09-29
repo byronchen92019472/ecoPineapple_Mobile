@@ -10,17 +10,12 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <CollectionView Margin="20"
-                        ItemsSource="{x:Static data:SustainabilityData.Sustainability}"
-                        SelectionMode="Single"/>
-        <!--<StackLayout>
+        <StackLayout >
             <Label Text="Sustainability Issues" Style="{StaticResource headingStyle}"/>
-            <Label x:Name="SustainabilityTextBody" Style="{StaticResource textbodyStyle}"/>
+            <Label x:Name="SustainabilityHomeText1" Text="" Style="{StaticResource textbodyStyle}"/>
             <Image Source="sustain.png" Style="{StaticResource largeimageStyle}"/>
-            <BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />
-            <BoxView BackgroundColor="Blue" HeightRequest="600" WidthRequest="150" />
-            <BoxView BackgroundColor="Green" HeightRequest="600" WidthRequest="150" />
-            <BoxView BackgroundColor="GreenYellow" HeightRequest="600" WidthRequest="150" />
-        </StackLayout>-->
+            <Label x:Name="SustainabilityHomeText2" Text="" Style="{StaticResource textbodyStyle}"/>
+            <!--<BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />-->
+        </StackLayout>
     </ScrollView>
 </ContentPage>

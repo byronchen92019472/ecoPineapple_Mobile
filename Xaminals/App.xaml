@@ -26,7 +26,32 @@
                        VerticalOptions="End" />
             </Grid>
         </DataTemplate>
-        
+
+        <DataTemplate x:Key="AnnouncementTemplate">
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.RowSpan="2" 
+                       Source="{Binding Title}" 
+                       Aspect="AspectFill"
+                       HeightRequest="60" 
+                       WidthRequest="60" />
+                <Label Grid.Column="0" 
+                       Text="{Binding Details}" 
+                       FontAttributes="Bold" />
+                <Label Grid.Row="1"
+                       Grid.Column="0" 
+                       Text="{Binding DateTime}"
+                       FontAttributes="Italic" 
+                       VerticalOptions="End" />
+            </Grid>
+        </DataTemplate>
+
         <DataTemplate x:Key="AnimalSearchTemplate">
             <Grid Padding="10">
                 <Grid.ColumnDefinitions>
@@ -58,14 +83,14 @@
             <Setter Property="TextColor" Value="Black"/>
             <Setter Property="Margin" Value="15,15,15,15"/>
             <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="FontSize" Value="Title"/>
             <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
         </Style>
 
         <Style x:Key="textbodyStyle" TargetType="Label">
             <Setter Property="TextColor" Value="DarkGray"/>
             <Setter Property="Margin" Value="15,0,15,15"/>
-            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="FontSize" Value="Body"/>
             <Setter Property="FontFamily" Value="Droid Sans Mono"/>
         </Style>
 

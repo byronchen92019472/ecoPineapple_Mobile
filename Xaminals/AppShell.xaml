@@ -81,7 +81,25 @@
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor" 
-                    Value="#96d1ff" />
+                    Value="DarkRed" />
+        </Style>
+        <Style x:Key="StaffShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="Red" />
+        </Style>
+        <Style x:Key="SolutionsShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="#67971A" />
+        </Style>
+        <Style x:Key="SpaceShell" 
+               TargetType="Element" 
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor" 
+                    Value="DarkViolet" />
         </Style>
     </Shell.Resources>
  
@@ -164,44 +182,44 @@
              Icon="issues.svg">
           
             <ShellContent Route="monkeys"
-                          Style="{StaticResource MonkeysShell}"
+                          Style="{StaticResource SustainabilityShell}"
                           Title="Home"
                           Icon="issues.png"
                           ContentTemplate="{DataTemplate views:SustainabilityHome}" />
             <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
+                          Style="{StaticResource SustainabilityShell}"
                           Title="Climate"
                           Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
+                          ContentTemplate="{DataTemplate views:SustainabilityClimate}" />
             <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
-                          Title="Food"
+                          Style="{StaticResource SustainabilityShell}"
+                          Title="Plastic"
                           Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
-                          Title="Energy"
-                          Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
+                          ContentTemplate="{DataTemplate views:SustainabilityPlastic}" />
         </Tab>
         <Tab Title="Solutions"
              Route="domestic"
              Icon="products.svg">
             <ShellContent Route="elephants"
-                          Style="{StaticResource ElephantsShell}"
+                          Style="{StaticResource SolutionsShell}"
                           Title="Home"
-                          Icon="solutions.png"
-                          ContentTemplate="{DataTemplate views:AboutPage}" />
+                          Icon="solutionitems.png"
+                          ContentTemplate="{DataTemplate views:SolutionHome}" />
             <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
-                          Title="Material"
+                          Style="{StaticResource SolutionsShell}"
+                          Title="Your Role"
                           Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:ElephantsPage}" />
+                          ContentTemplate="{DataTemplate views:SolutionRole}" />
             <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
-                          Title="Sourcing"
+                          Style="{StaticResource SolutionsShell}"
+                          Title="Recycling"
                           Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
+                          ContentTemplate="{DataTemplate views:SolutionRecycle}" />
+            <ShellContent Route="dogs"
+                          Style="{StaticResource SpaceShell}"
+                          Title="Space"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:SolutionSpace}" />
         </Tab>
         <Tab Title="Products"
              Route="domestic"
@@ -209,8 +227,8 @@
             <ShellContent Route="bears"
                           Style="{StaticResource BearsShell}"
                           Title="Home"
-                          Icon="products.png"
-                          ContentTemplate="{DataTemplate views:BearsPage}" />
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:ProductHome}" />
             <ShellContent Route="dogs"
                           Style="{StaticResource DomesticShell}"
                           Title="Spoon"
@@ -223,7 +241,19 @@
                           ContentTemplate="{DataTemplate views:DogsPage}" />
         </Tab>
     </FlyoutItem>
-    
+
+    <ShellContent Route="login"
+                  Style="{StaticResource StaffShell}"
+                  Title="Staff Login"
+                  Icon="login.png"
+                  ContentTemplate="{DataTemplate views:LoginPage}" />
+
+    <ShellContent Route="logout"
+                  Style="{StaticResource StaffShell}"
+                  Title="Logout"
+                  Icon="logout.png"
+                  ContentTemplate="{DataTemplate views:LoginPage}" />
+
     <ShellContent Route="announcement"
                   Style="{StaticResource AnnouncementShell}"
                   Title="Announcement"
