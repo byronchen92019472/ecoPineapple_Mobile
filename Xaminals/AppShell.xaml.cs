@@ -23,15 +23,12 @@ namespace Xaminals
             InitializeComponent();
             RegisterRoutes();
             BindingContext = this;
+            BackgroundImageSource = "banner.png";
         }
 
         void RegisterRoutes()
         {
-            routes.Add("monkeydetails", typeof(MonkeyDetailPage));
-            routes.Add("beardetails", typeof(BearDetailPage));
-            routes.Add("catdetails", typeof(CatDetailPage));
             routes.Add("dogdetails", typeof(DogDetailPage));
-            routes.Add("elephantdetails", typeof(ElephantDetailPage));
             routes.Add("announcementdetails", typeof(AnnouncementDetailPage));
 
             foreach (var item in routes)
@@ -47,20 +44,8 @@ namespace Xaminals
 
             switch (destinationRoute)
             {
-                case "monkeydetails":
-                    animalName = MonkeyData.Monkeys.ElementAt(rand.Next(0, MonkeyData.Monkeys.Count)).Name;
-                    break;
-                case "beardetails":
-                    animalName = BearData.Bears.ElementAt(rand.Next(0, BearData.Bears.Count)).Name;
-                    break;
-                case "catdetails":
-                    animalName = CatData.Cats.ElementAt(rand.Next(0, CatData.Cats.Count)).Name;
-                    break;
                 case "dogdetails":
                     animalName = DogData.Dogs.ElementAt(rand.Next(0, DogData.Dogs.Count)).Name;
-                    break;
-                case "elephantdetails":
-                    animalName = ElephantData.Elephants.ElementAt(rand.Next(0, ElephantData.Elephants.Count)).Name;
                     break;
             }
 

@@ -231,9 +231,9 @@
                           ContentTemplate="{DataTemplate views:ProductHome}" />
             <ShellContent Route="dogs"
                           Style="{StaticResource DomesticShell}"
-                          Title="Spoon"
+                          Title="Products"
                           Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
+                          ContentTemplate="{DataTemplate views:ProductPage}" />
             <ShellContent Route="dogs"
                           Style="{StaticResource DomesticShell}"
                           Title="Space"

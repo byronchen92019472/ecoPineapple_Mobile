@@ -17,8 +17,14 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\ProductDetailPage.xaml.cs">
+      <DependentUpon>ProductDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\AnnouncementDetailPage.xaml.cs">
       <DependentUpon>AnnouncementDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>

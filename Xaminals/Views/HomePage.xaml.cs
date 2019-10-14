@@ -33,5 +33,18 @@ namespace Xaminals.Views
         {
             await Navigation.PushAsync(new ContactPage());
         }
+
+        private async void IssuesButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SustainabilityHome());
+        }
+        private async void SolutionsButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SolutionHome());
+        }
+        private async void ProductsButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProductHome());
+        }
     }
 }

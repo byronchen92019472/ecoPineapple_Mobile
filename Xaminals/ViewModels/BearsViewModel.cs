@@ -21,7 +21,7 @@ namespace Xaminals.ViewModels
             }
             else
             {
-                var filteredItems = BearData.Bears
+                var filteredItems = DogData.Dogs
                     .Where(bear => bear.Name.ToLower()
                     .Contains(query.ToLower()))
                     .ToList();

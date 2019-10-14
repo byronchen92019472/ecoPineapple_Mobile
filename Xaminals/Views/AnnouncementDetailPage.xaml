@@ -5,13 +5,13 @@
              Title="Announcement Details">
     <ScrollView>
         <StackLayout Margin="20">
-            <Label Text="{Binding Name}" 
+            <Label Text="{Binding Title}" 
                    HorizontalOptions="Center" 
                    Style="{DynamicResource TitleStyle}" />
-            <Label Text="{Binding Location}" 
+            <Label Text="{Binding DateTime}" 
                    FontAttributes="Italic" 
                    HorizontalOptions="Center" />
-            <Image Source="{Binding ImageUrl}" 
+            <Image Source="{Binding ImageSource}" 
                    HeightRequest="200" 
                    WidthRequest="200" 
                    HorizontalOptions="CenterAndExpand" />

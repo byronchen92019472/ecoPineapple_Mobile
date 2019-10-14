@@ -15,7 +15,7 @@ namespace Xaminals.ViewModels
         {
             set
             {
-                Animal monkey = MonkeyData.Monkeys.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
+                Animal monkey = DogData.Dogs.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
 
                 if (monkey != null)
                 {

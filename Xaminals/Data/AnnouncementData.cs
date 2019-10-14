@@ -13,7 +13,7 @@ namespace Xaminals.Data
 
             Announce.Add(new Announcement
             {
-                Title = "Christchurch - Strike 4 Climate NZ (Sep 27 2019) ",
+                Title = "Christchurch - Strike 4 Climate NZ\n(Sep 27 2019)",
                 Details =
                     "Join us for Christchurch's third climate strike, and this time, we're going" +
                     " intergenerational. Bring your siblings, friends, parents, grandparents, " +
@@ -21,6 +21,7 @@ namespace Xaminals.Data
                     "Event will be held on Friday, 27 September 2019 from 13:00-15:00 at the " +
                     "Cathedral Sq, Christchurch Central, Christchurch 8011, New Zealand",
                 DateTime = "09/26/2019 11:50:06",
+                ImageSource = "protest.png"
             });
         }
     }

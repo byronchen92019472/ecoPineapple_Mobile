@@ -27,28 +27,35 @@
             </Grid>
         </DataTemplate>
 
-        <DataTemplate x:Key="AnnouncementTemplate">
+         <DataTemplate x:Key="AnnouncementTemplate">
             <Grid Padding="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="0.15*" />
+                    <ColumnDefinition Width="0.85*" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.RowSpan="2" 
-                       Source="{Binding Title}" 
+                <Image Source="{Binding ImageSource}" 
                        Aspect="AspectFill"
-                       HeightRequest="60" 
-                       WidthRequest="60" />
-                <Label Grid.Column="0" 
-                       Text="{Binding Details}" 
+                       HeightRequest="40" 
+                       WidthRequest="40" />
+                <Label Grid.Column="1" 
+                       Text="{Binding Title}" 
                        FontAttributes="Bold" />
-                <Label Grid.Row="1"
-                       Grid.Column="0" 
-                       Text="{Binding DateTime}"
-                       FontAttributes="Italic" 
-                       VerticalOptions="End" />
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ProductTemplate">
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.15*" />
+                    <ColumnDefinition Width="0.85*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding ImageSource}" 
+                       Aspect="AspectFill"
+                       HeightRequest="40" 
+                       WidthRequest="40" />
+                <Label Grid.Column="1" 
+                       Text="{Binding Name}" 
+                       FontAttributes="Bold" />
             </Grid>
         </DataTemplate>
 
@@ -68,7 +75,7 @@
             </Grid>
         </DataTemplate>
 
-        <Style x:Key="buttonStyle" TargetType="Button">
+        <!--<Style x:Key="buttonStyle" TargetType="Button">
             <Setter Property="BackgroundColor" Value="#fbbf14"/>
             <Setter Property="Margin" Value="0,0,0,0"/>
             <Setter Property="Padding" Value="0,0,0,0"/>
@@ -77,6 +84,22 @@
             <Setter Property="CornerRadius" Value="5"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="FontSize" Value="Medium"/>
+        </Style>-->
+
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <!--<Setter Property="BackgroundColor" Value="#fbbf14"/>-->
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="Padding" Value="0,0,0,0"/>
+            <Setter Property="Margin" Value="15,0,15,15"/>
+            <Setter Property="FontSize" Value="Body"/>
+            <Setter Property="FontFamily" Value="Droid Sans Mono"/>
+            <!--<Setter Property="BorderColor" Value="#000000"/>
+            <Setter Property="BorderWidth" Value="2"/>-->
+            <!--<Setter Property="CornerRadius" Value="5"/>-->
+            <!--<Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Medium"/>-->
         </Style>
 
         <Style x:Key="headingStyle" TargetType="Label">
@@ -88,7 +111,8 @@
         </Style>
 
         <Style x:Key="textbodyStyle" TargetType="Label">
-            <Setter Property="TextColor" Value="DarkGray"/>
+            <!--<Setter Property="TextColor" Value="DarkGray"/>-->
+            <Setter Property="TextColor" Value="Black"/>
             <Setter Property="Margin" Value="15,0,15,15"/>
             <Setter Property="FontSize" Value="Body"/>
             <Setter Property="FontFamily" Value="Droid Sans Mono"/>
