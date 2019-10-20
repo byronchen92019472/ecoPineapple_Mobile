@@ -4,8 +4,6 @@
        xmlns:controls="clr-namespace:Xaminals.Controls"
        xmlns:views="clr-namespace:Xaminals.Views"
        FlyoutHeaderBehavior="CollapseOnScroll"
-       Navigating="OnNavigating"
-       Navigated="OnNavigated"
        x:Class="Xaminals.AppShell">
     <Shell.Resources>
         <Style x:Key="BaseStyle" 
@@ -23,71 +21,23 @@
         </Style>
         <Style TargetType="ShellItem" 
                BasedOn="{StaticResource BaseStyle}" />
-        <Style x:Key="DomesticShell"
+        <Style x:Key="HomeShell"
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor" 
                     Value="#434343" /> <!-- #67971A" Green colour-->        
         </Style>
-        <Style x:Key="MonkeysShell" 
-               TargetType="Element"
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#689F39" />
-        </Style>
-        <Style x:Key="ElephantsShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#ED3B3B" />
-        </Style>
-        <Style x:Key="BearsShell" 
+        <Style x:Key="ProductsShell" 
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
                     Value="#546DFE" />
-        </Style>
-        <Style x:Key="AboutShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#96d1ff" />
-        </Style>      
-        <Style x:Key="AnnouncementShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#96d1ff" />
-        </Style>       
-        <Style x:Key="AccessibilityShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#96d1ff" />
-        </Style>   
-        <Style x:Key="PrivacyShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#96d1ff" />
-        </Style>       
-        <Style x:Key="ContactShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="#96d1ff" />
         </Style>
         <Style x:Key="SustainabilityShell" 
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor" 
                     Value="DarkRed" />
-        </Style>
-        <Style x:Key="StaffShell" 
-               TargetType="Element" 
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor" 
-                    Value="Red" />
         </Style>
         <Style x:Key="SolutionsShell" 
                TargetType="Element" 
@@ -106,191 +56,58 @@
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    
-    <!-- Template for FlyoutHeader -->
-    <!-- Not required, as the FlyoutHeader is set above -->
-<!--    <Shell.FlyoutHeaderTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="Black"
-                  HeightRequest="200">
-                <Image Aspect="AspectFill" 
-                       Source="xamarinstore.jpg" 
-                       Opacity="0.6" />
-                <Label Text="Animals" 
-                       TextColor="White" 
-                       FontAttributes="Bold" 
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Grid>            
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>-->
-    
-    <!-- Template each FlyoutItem -->
-<!--    <Shell.ItemTemplate>
-        <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.8*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
-                       Margin="5"
-                       HeightRequest="45" />
-                <Label Grid.Column="1"
-                       Text="{Binding Title}"
-                       FontAttributes="Italic"
-                       VerticalTextAlignment="Center" /> 
-            </Grid>
-        </DataTemplate>
-    </Shell.ItemTemplate>-->
-    
-    <!-- Template each MenuItem -->
-<!--    <Shell.MenuItemTemplate>
-        <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.8*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
-                       Margin="5"
-                       HeightRequest="45" />
-                <Label Grid.Column="1"
-                       Text="{Binding Text}"
-                       FontAttributes="Italic"
-                       VerticalTextAlignment="Center" /> 
-            </Grid>
-        </DataTemplate>
-    </Shell.MenuItemTemplate>-->
-    
-    <FlyoutItem Route="animals"
-                Title="EcoPineapple"
-                FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Home"
-             Route="domestic"
-             Icon="home.png">
 
-            <ShellContent Route="cats"
-                          Style="{StaticResource DomesticShell}"
-                          Title="Cats"
-                          Icon="cat.png"
+    <FlyoutItem Title="EcoPineapple"
+                FlyoutDisplayOptions="AsMultipleItems">
+        
+        <Tab Title="Home"
+             Icon="home.png">
+            <ShellContent Style="{StaticResource HomeShell}"
                           ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
 
         <Tab Title="Issues"
-             Route="domestic"
              Icon="issues.svg">
-          
-            <ShellContent Route="monkeys"
-                          Style="{StaticResource SustainabilityShell}"
+
+            <ShellContent Style="{StaticResource SustainabilityShell}"
                           Title="Home"
-                          Icon="issues.png"
                           ContentTemplate="{DataTemplate views:SustainabilityHome}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource SustainabilityShell}"
+            <ShellContent Style="{StaticResource SustainabilityShell}"
                           Title="Climate"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:SustainabilityClimate}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource SustainabilityShell}"
+            <ShellContent Style="{StaticResource SustainabilityShell}"
                           Title="Plastic"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:SustainabilityPlastic}" />
         </Tab>
+        
         <Tab Title="Solutions"
-             Route="domestic"
              Icon="products.svg">
-            <ShellContent Route="elephants"
-                          Style="{StaticResource SolutionsShell}"
+            <ShellContent Style="{StaticResource SolutionsShell}"
                           Title="Home"
-                          Icon="solutionitems.png"
                           ContentTemplate="{DataTemplate views:SolutionHome}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource SolutionsShell}"
+            <ShellContent Style="{StaticResource SolutionsShell}"
                           Title="Your Role"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:SolutionRole}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource SolutionsShell}"
+            <ShellContent Style="{StaticResource SolutionsShell}"
                           Title="Recycling"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:SolutionRecycle}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource SpaceShell}"
+            <ShellContent Style="{StaticResource SpaceShell}"
                           Title="Space"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:SolutionSpace}" />
         </Tab>
+        
         <Tab Title="Products"
-             Route="domestic"
              Icon="solutions.svg">
-            <ShellContent Route="bears"
-                          Style="{StaticResource BearsShell}"
+            <ShellContent Style="{StaticResource ProductsShell}"
                           Title="Home"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:ProductHome}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
+            <ShellContent Style="{StaticResource ProductsShell}"
                           Title="Products"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:ProductPage}" />
-            <ShellContent Route="dogs"
-                          Style="{StaticResource DomesticShell}"
+            <ShellContent Style="{StaticResource SpaceShell}"
                           Title="Space"
-                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:ProductSpace}" />
         </Tab>
+        
     </FlyoutItem>
-
-    <!--<ShellContent Route="login"
-                  Style="{StaticResource StaffShell}"
-                  Title="Staff Login"
-                  Icon="login.png"
-                  ContentTemplate="{DataTemplate views:LoginPage}" />
-
-    <ShellContent Route="logout"
-                  Style="{StaticResource StaffShell}"
-                  Title="Logout"
-                  Icon="logout.png"
-                  ContentTemplate="{DataTemplate views:LoginPage}" />
-
-    <ShellContent Route="announcement"
-                  Style="{StaticResource AnnouncementShell}"
-                  Title="Announcement"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:AnnouncementPage}" />
-    <ShellContent Route="accessibility"
-                  Style="{StaticResource AccessibilityShell}"
-                  Title="Accessibility"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:AccessibilityPage}" />
-    <ShellContent Route="privacy"
-                  Style="{StaticResource PrivacyShell}"
-                  Title="Privacy Policy"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:PrivacyPage}" />
-    <ShellContent Route="contact"
-                  Style="{StaticResource ContactShell}"
-                  Title="Contact Information"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:ContactPage}" />
-    <ShellContent Route="sustainability"
-                  Style="{StaticResource SustainabilityShell}"
-                  Title="Sustainability Issues"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:SustainabilityHome}" />-->        
-    <!--<ShellContent Route="about"
-                  Style="{StaticResource AboutShell}"
-                  Title="About"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:AboutPage}" />
-                  
-    <MenuItem Text="Random"
-              Icon="random.png"
-              Command="{Binding RandomPageCommand}" />
-    <MenuItem Text="Help"
-              Icon="help.png"
-              Command="{Binding HelpCommand}"
-              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />-->
-    
 </Shell>

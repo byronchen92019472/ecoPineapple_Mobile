@@ -33,7 +33,6 @@ namespace Xaminals.Views
                 "with manufacturing offending products, companies would likely pursue " +
                 "alternatives to avoid these taxes. This is a quick and drastic solution to " +
                 "change our spending habits.";
-
         }
     }
 }

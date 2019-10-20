@@ -6,37 +6,41 @@
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="80*" />
+                <ColumnDefinition Width="10*" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Name}" 
-                   HorizontalOptions="Center" />
-            <!--Style="{DynamicResource TitleStyle}" />-->
-            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Details}" 
+            <Frame BorderColor="Black" Grid.Row="0" Grid.Column="1" Margin="0,20,0,0">
+                <Image Source="{Binding ImageSource}"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+            </Frame>
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Name}" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"
+                   FontSize="Large"/>
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Details}" 
                    FontAttributes="Italic" 
-                   HorizontalOptions="Center" />
-            <Label Grid.Row="3" Grid.Column="0" Text="Supplier:" HorizontalOptions="End"/>
-            <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" 
-                   Text="{Binding Supplier}" 
-                   Style="{DynamicResource BodyStyle}" />
-            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-                   Source="{Binding ImageSource}"
-                   HeightRequest="200" 
-                   WidthRequest="200" 
-                   HorizontalOptions="CenterAndExpand" />
-            <Label Grid.Row="4" Grid.Column="0" HorizontalOptions="End" Text="Cost:" />
-            <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="Start"
-                   Text="{Binding Cost}" 
-                   Style="{DynamicResource BodyStyle}" />
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Text=""
+                   BackgroundColor="Gray"/>
+            <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" 
+                   Text="{Binding Supplier, StringFormat='Supplier: {0:N}'}"
+                   TextColor="Black"/>
+            <Label Grid.Row="5" Grid.Column="1" HorizontalOptions="Start"
+                   Text="{Binding Cost, StringFormat='Price: {0:N}'}" 
+                   TextColor="Black" />
         </Grid>
     </ScrollView>
 </ContentPage>

@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xaminals.App">
     <Application.Resources>
-        <DataTemplate x:Key="AnimalTemplate">
-            <Grid Padding="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.RowSpan="2" 
-                       Source="{Binding ImageUrl}" 
-                       Aspect="AspectFill"
-                       HeightRequest="60" 
-                       WidthRequest="60" />
-                <Label Grid.Column="1" 
-                       Text="{Binding Name}" 
-                       FontAttributes="Bold" />
-                <Label Grid.Row="1"
-                       Grid.Column="1" 
-                       Text="{Binding Location}"
-                       FontAttributes="Italic" 
-                       VerticalOptions="End" />
-            </Grid>
-        </DataTemplate>
-
-         <DataTemplate x:Key="AnnouncementTemplate">
-            <Grid Padding="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.15*" />
-                    <ColumnDefinition Width="0.85*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding ImageSource}" 
-                       Aspect="AspectFill"
-                       HeightRequest="40" 
-                       WidthRequest="40" />
-                <Label Grid.Column="1" 
-                       Text="{Binding Title}" 
-                       FontAttributes="Bold" />
-            </Grid>
-        </DataTemplate>
-
         <DataTemplate x:Key="ProductTemplate">
             <Grid Padding="10">
                 <Grid.ColumnDefinitions>
@@ -59,35 +17,7 @@
             </Grid>
         </DataTemplate>
 
-        <DataTemplate x:Key="AnimalSearchTemplate">
-            <Grid Padding="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.15*" />
-                    <ColumnDefinition Width="0.85*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding ImageUrl}" 
-                       Aspect="AspectFill"
-                       HeightRequest="40" 
-                       WidthRequest="40" />
-                <Label Grid.Column="1" 
-                       Text="{Binding Name}" 
-                       FontAttributes="Bold" />
-            </Grid>
-        </DataTemplate>
-
-        <!--<Style x:Key="buttonStyle" TargetType="Button">
-            <Setter Property="BackgroundColor" Value="#fbbf14"/>
-            <Setter Property="Margin" Value="0,0,0,0"/>
-            <Setter Property="Padding" Value="0,0,0,0"/>
-            <Setter Property="BorderColor" Value="#000000"/>
-            <Setter Property="BorderWidth" Value="2"/>
-            <Setter Property="CornerRadius" Value="5"/>
-            <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="FontSize" Value="Medium"/>
-        </Style>-->
-
         <Style x:Key="buttonStyle" TargetType="Button">
-            <!--<Setter Property="BackgroundColor" Value="#fbbf14"/>-->
             <Setter Property="BackgroundColor" Value="White"/>
             <Setter Property="TextColor" Value="Blue"/>
             <Setter Property="Margin" Value="0,0,0,0"/>
@@ -95,11 +25,6 @@
             <Setter Property="Margin" Value="15,0,15,15"/>
             <Setter Property="FontSize" Value="Body"/>
             <Setter Property="FontFamily" Value="Droid Sans Mono"/>
-            <!--<Setter Property="BorderColor" Value="#000000"/>
-            <Setter Property="BorderWidth" Value="2"/>-->
-            <!--<Setter Property="CornerRadius" Value="5"/>-->
-            <!--<Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="FontSize" Value="Medium"/>-->
         </Style>
 
         <Style x:Key="headingStyle" TargetType="Label">
@@ -111,7 +36,6 @@
         </Style>
 
         <Style x:Key="textbodyStyle" TargetType="Label">
-            <!--<Setter Property="TextColor" Value="DarkGray"/>-->
             <Setter Property="TextColor" Value="Black"/>
             <Setter Property="Margin" Value="15,0,15,15"/>
             <Setter Property="FontSize" Value="Body"/>
@@ -119,7 +43,6 @@
         </Style>
 
         <Style x:Key="textinnstructionStyle" TargetType="Label">
-            <!--<Setter Property="TextColor" Value="DarkGray"/>-->
             <Setter Property="TextColor" Value="DarkBlue"/>
             <Setter Property="Margin" Value="15,0,15,15"/>
             <Setter Property="FontSize" Value="Body"/>

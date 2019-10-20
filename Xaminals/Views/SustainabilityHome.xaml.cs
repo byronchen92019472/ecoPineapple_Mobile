@@ -25,14 +25,6 @@ namespace Xaminals.Views
                 " app are the effects of climate change and our single-use plastics being littered" +
                 " around our environment. We need to be able to confront these issues by avoiding the" +
                 " exhaustion or degradation of our resources.";
-
-            //SustainabilityHomeText.Text =
-            //    "Sustainability issues include a fast-expanding and resource-hungry human " +
-            //    "population, fossil-fuel burning that accelerates global warming, the imminent peak" +
-            //    " in cheap oil production (when total demand exceeds easily-affordable supply) and" +
-            //    " persistent pollutant chemicals and plastics being spread globally in air and oceans." +
-            //    " Humans are displacing other life on the planet, speeding extinction of many species," +
-            //    " including here in New Zealand.";
         }
     }
 }

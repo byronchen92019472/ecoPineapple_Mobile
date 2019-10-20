@@ -15,7 +15,6 @@
             <Label x:Name="SustainabilityHomeText1" Text="" Style="{StaticResource textbodyStyle}"/>
             <Image Source="sustain.png" Style="{StaticResource largeimageStyle}"/>
             <Label x:Name="SustainabilityHomeText2" Text="" Style="{StaticResource textbodyStyle}"/>
-            <!--<BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="150" />-->
         </StackLayout>
     </ScrollView>
 </ContentPage>

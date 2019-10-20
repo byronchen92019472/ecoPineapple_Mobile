@@ -9,16 +9,17 @@ namespace Xaminals.Data
 
         static SpaceData()
         {
-            Sp = new List<Space>();
-
-            Sp.Add(new Space
+            Sp = new List<Space>
             {
-                Name = "HyperX",
-                Details = "This trip will take you to Mars",
-                ImageSource = "falconheavy.png",
-                Cost = "$50000000",
-                Supplier = "SpaceX"
-            });
+                new Space
+                {
+                    Name = "Falcon Heavy",
+                    Details = "Partially reusable heavy-lift launch vehicle",
+                    ImageSource = "falconheavy.png",
+                    Cost = "$150,000,000",
+                    Supplier = "SpaceX"
+                }
+            };
         }
     }
 }

@@ -30,7 +30,6 @@ namespace Xaminals.Views
                 "that HALF of all plastic manufactured becomes trash in less than a year.\n\nAs " +
                 "a society, we need to accept that our convenience may be hindered when we find" +
                 " a better solution for managing our plastic use.";
-
         }
     }
 }

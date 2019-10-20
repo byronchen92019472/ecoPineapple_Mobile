@@ -3,40 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Xaminals.Views.ProductSpaceDetailPage"
              Title="Space Trip Details">
-    <ScrollView>
-        <Grid>
+    <ScrollView BackgroundColor="Black">
+        <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition Width="10*" />
             </Grid.ColumnDefinitions>
-
-            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Name}" 
-                   HorizontalOptions="Center" />
-            <!--Style="{DynamicResource TitleStyle}" />-->
-            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Details}" 
-                   FontAttributes="Italic" 
-                   HorizontalOptions="Center" />
-            <Label Grid.Row="3" Grid.Column="0" Text="Supplier:" HorizontalOptions="End"/>
-            <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" 
-                   Text="{Binding Supplier}" 
-                   Style="{DynamicResource BodyStyle}" />
-            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+            
+            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="7"
                    Source="{Binding ImageSource}"
-                   HeightRequest="200" 
-                   WidthRequest="200" 
-                   HorizontalOptions="CenterAndExpand" />
-            <Label Grid.Row="4" Grid.Column="0" HorizontalOptions="End" Text="Cost:" />
-            <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="Start"
-                   Text="{Binding Cost}" 
-                   Style="{DynamicResource BodyStyle}" />
+                   HorizontalOptions="CenterAndExpand"/>
+            <Label Text="" Grid.Row="0" Grid.Column="1" Grid.RowSpan="7" BackgroundColor="Gray"/>
+            <Label Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding Name}" 
+                   TextColor="White"
+                   FontAttributes="Bold"/>
+            <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding Details}" 
+                   FontAttributes="Italic" 
+                   TextColor="Gray"/>
+            <Label Grid.Row="3" Grid.Column="2" HorizontalOptions="Start" 
+                   Text="{Binding Supplier, StringFormat='Manufacturer: {0:N}'}"
+                   TextColor="White"/>
+            <Label Grid.Row="4" Grid.Column="2" HorizontalOptions="Start"
+                   Text="{Binding Cost, StringFormat='Price: {0:N}'}" 
+                   TextColor="White" />
         </Grid>
     </ScrollView>
 </ContentPage>
