@@ -4,8 +4,8 @@
              xmlns:controls="clr-namespace:Xaminals.Controls"
              xmlns:data="clr-namespace:Xaminals.Data"
              xmlns:views="clr-namespace:Xaminals.Views"
-             x:Class="Xaminals.Views.ProductPage"
-             Title="Products">
+             x:Class="Xaminals.Views.ProductSpace"
+             Title="Space">
     <ContentPage.Resources>
         <Style TargetType="Grid">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -43,7 +43,7 @@
     </Shell.SearchHandler>-->
 
     <CollectionView Margin="20"
-                    ItemsSource="{x:Static data:ProductData.Prod}"
+                    ItemsSource="{x:Static data:SpaceData.Sp}"
                     ItemTemplate="{StaticResource ProductTemplate}"
                     SelectionMode="Single"
                     SelectionChanged="OnCollectionViewSelectionChanged" />

@@ -30,10 +30,15 @@ namespace Xaminals
         {
             routes.Add("dogdetails", typeof(DogDetailPage));
             routes.Add("announcementdetails", typeof(AnnouncementDetailPage));
+            routes.Add("productdetails", typeof(ProductDetailPage));
+            routes.Add("spacedetails", typeof(ProductSpaceDetailPage));
 
             foreach (var item in routes)
             {
                 Routing.RegisterRoute(item.Key, item.Value);
+                Routing.RegisterRoute("sustainability", typeof(AnnouncementDetailPage));
+                Routing.RegisterRoute("solution", typeof(AnnouncementDetailPage));
+                Routing.RegisterRoute("product", typeof(AnnouncementDetailPage));
             }
         }
 

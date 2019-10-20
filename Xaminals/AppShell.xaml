@@ -164,7 +164,7 @@
     </Shell.MenuItemTemplate>-->
     
     <FlyoutItem Route="animals"
-                Title="Animals"
+                Title="EcoPineapple"
                 FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Home"
              Route="domestic"
@@ -238,11 +238,11 @@
                           Style="{StaticResource DomesticShell}"
                           Title="Space"
                           Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
+                          ContentTemplate="{DataTemplate views:ProductSpace}" />
         </Tab>
     </FlyoutItem>
 
-    <ShellContent Route="login"
+    <!--<ShellContent Route="login"
                   Style="{StaticResource StaffShell}"
                   Title="Staff Login"
                   Icon="login.png"
@@ -278,7 +278,7 @@
                   Style="{StaticResource SustainabilityShell}"
                   Title="Sustainability Issues"
                   Icon="info.png"
-                  ContentTemplate="{DataTemplate views:SustainabilityHome}" />        
+                  ContentTemplate="{DataTemplate views:SustainabilityHome}" />-->        
     <!--<ShellContent Route="about"
                   Style="{StaticResource AboutShell}"
                   Title="About"

@@ -17,15 +17,18 @@
 
                 <Label Style="{StaticResource textbodyStyle}" Text="Welcome to ecoPineapple's mobile app. We here are fully committed to promoting sustainability."/>
                 <Label Style="{StaticResource textbodyStyle}" Text="Some people have no real concept of sustainable living and others do not see the future consequences of their actions. We need to make sure that they are well informed and to get involved."/>
-                <Button StyleClass="Link" Style="{StaticResource buttonStyle}" Clicked="IssuesButtonClicked" Text="Tap here to learn about our major sustainability issues"/>
+                <Label Style="{StaticResource textinnstructionStyle}" Text="Click on the 'Issues' tab to begin learning about our major sustainability issues."/>
+                <!--<Button StyleClass="Link" Style="{StaticResource buttonStyle}" Clicked="IssuesButtonClicked" Text="Tap here to learn about our major sustainability issues"/>-->
 
                 <Label Style="{StaticResource textbodyStyle}" Text="Since sustainablity is such a huge issue, it is often hard to find ways to help. It is our responsibility to take care of the environmental impacts that we have created. We need to ensure that we maximise the effiency of our resources by repurposing throwaway materials." />
-                <Button Style="{StaticResource buttonStyle}" Clicked="SolutionsButtonClicked" Text="Tap here to learn more about sustainability solutions."/>
+                <Label Style="{StaticResource textinnstructionStyle}" Text="Click on the 'Solutions' tab to learn about sustainability solutions."/>
+                <!--<Button Style="{StaticResource buttonStyle}" Clicked="SolutionsButtonClicked" Text="Tap here to learn more about sustainability solutions."/>-->
 
                 <Label Style="{StaticResource textbodyStyle}" Text="We work closely with our suppliers to make sure that our products are eco-friendly. As a customer of our store, you also become our partner in helping to fight for our planet's future." />
-                <Button Style="{StaticResource buttonStyle}" Clicked="ProductsButtonClicked" Text="Tap here to view some of our products on offer."/>
+                <Label Style="{StaticResource textinnstructionStyle}" Text="Click on the 'Products' tab to browse some of our products on offer."/>
+                <!--<Button Style="{StaticResource buttonStyle}" Clicked="ProductsButtonClicked" Text="Tap here to view some of our products on offer."/>-->
 
-                <Label Style="{StaticResource textbodyStyle}" Text="Please use the tabbed bars to navigate between the pages." />
+                <!--<Label Style="{StaticResource textbodyStyle}" Text="Please use the tabbed bars to navigate between the pages." />-->
             </StackLayout>
         <!--<Grid RowSpacing="10" ColumnSpacing="0">
             <Grid.RowDefinitions>

@@ -6,17 +6,17 @@ using Xaminals.Data;
 namespace Xaminals.Views
 {
     [QueryProperty("Name", "name")]
-    public partial class ProductDetailPage : ContentPage
+    public partial class ProductSpaceDetailPage : ContentPage
     {
         public string Name
         {
             set
             {
-                BindingContext = ProductData.Prod.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
+                BindingContext = SpaceData.Sp.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
             }
         }
 
-        public ProductDetailPage()
+        public ProductSpaceDetailPage()
         {
             InitializeComponent();
         }

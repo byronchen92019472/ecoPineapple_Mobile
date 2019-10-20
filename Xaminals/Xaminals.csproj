@@ -17,11 +17,17 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\ProductSpaceDetailPage.xaml.cs">
+      <DependentUpon>ProductSpaceDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ProductDetailPage.xaml.cs">
       <DependentUpon>ProductDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\AnnouncementDetailPage.xaml.cs">
       <DependentUpon>AnnouncementDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ProductSpace.xaml.cs">
+      <DependentUpon>ProductSpace.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ProductPage.xaml.cs">
       <DependentUpon>ProductPage.xaml</DependentUpon>
