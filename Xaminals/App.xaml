@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xaminals.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Sustainability.App">
     <Application.Resources>
         <DataTemplate x:Key="ProductTemplate">
             <Grid Padding="10">
@@ -32,7 +32,7 @@
             <Setter Property="Margin" Value="15,15,15,15"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="FontSize" Value="Title"/>
-            <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
+            <Setter Property="FontFamily" Value="Droid Serif"/>
         </Style>
 
         <Style x:Key="textbodyStyle" TargetType="Label">

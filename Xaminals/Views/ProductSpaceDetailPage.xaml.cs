@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Xamarin.Forms;
-using Xaminals.Data;
+using Sustainability.Data;
 
-namespace Xaminals.Views
+namespace Sustainability.Views
 {
     [QueryProperty("Name", "name")]
     public partial class ProductSpaceDetailPage : ContentPage

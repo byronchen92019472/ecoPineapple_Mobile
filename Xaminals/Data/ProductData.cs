@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Xaminals.Models;
+using Sustainability.Models;
 
-namespace Xaminals.Data
+namespace Sustainability.Data
 {
     public static class ProductData
     {

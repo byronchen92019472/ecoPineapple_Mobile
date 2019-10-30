@@ -1,4 +1,4 @@
-﻿namespace Xaminals.Models
+﻿namespace Sustainability.Models
 {
     public class Product
     {

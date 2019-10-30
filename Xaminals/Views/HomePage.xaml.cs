@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace Xaminals.Views
+namespace Sustainability.Views
 {
     public partial class HomePage : ContentPage
     {

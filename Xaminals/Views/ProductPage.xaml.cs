@@ -2,9 +2,9 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Linq;
-using Xaminals.Models;
+using Sustainability.Models;
 
-namespace Xaminals.Views
+namespace Sustainability.Views
 {
     public partial class ProductPage : ContentPage
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using Xaminals.Data;
-using Xaminals.Views;
+using Sustainability.Data;
+using Sustainability.Views;
 
-namespace Xaminals
+namespace Sustainability
 {
     public partial class AppShell : Shell
     {
